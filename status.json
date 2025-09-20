@@ -1,0 +1,48 @@
+{
+    "last_updated": "2025-09-20T10:03:51Z",
+    "overall_status": "broken",
+    "working_count": 2,
+    "total_count": 10,
+    "tests": {
+        "go_install": {
+            "status": "working",
+            "notes": ""
+        },
+        "docker_install": {
+            "status": "broken",
+            "notes": "Docker daemon not running"
+        },
+        "homebrew_install": {
+            "status": "broken",
+            "notes": "Homebrew tap repository not found"
+        },
+        "server_health": {
+            "status": "broken",
+            "notes": "Health endpoint not responding"
+        },
+        "server_traces_api": {
+            "status": "broken",
+            "notes": "Traces API not responding"
+        },
+        "server_stats_api": {
+            "status": "broken",
+            "notes": "Stats API not responding"
+        },
+        "python_install": {
+            "status": "broken",
+            "notes": "Failed to install Python SDK"
+        },
+        "python_import": {
+            "status": "working",
+            "notes": ""
+        },
+        "simple_example": {
+            "status": "broken",
+            "notes": "Simple example failed to run"
+        },
+        "test_script": {
+            "status": "broken",
+            "notes": "Test script failed to run"
+        }
+    }
+}
