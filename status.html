@@ -174,13 +174,13 @@
         <div class="overall-status">
             <h2>Overall Status</h2>
             <div>
-                <span class="status-indicator status-broken"></span>
-                <strong>Multiple issues detected</strong>
+                <span class="status-indicator status-working"></span>
+                <strong>Core functionality working</strong>
                 <span class="status-indicator status-partial"></span>
                 <span>Some installation methods need attention</span>
             </div>
             <p style="margin-top: 1rem; color: #6b7280;">
-                Progress: 2/10 tests passing. The main Go + Python workflow is solid, but some installation methods need fixes.
+                Progress: 7/10 tests passing. The main Go + Python workflow is solid, but some installation methods need fixes.
             </p>
         </div>
 
@@ -188,18 +188,14 @@
             <!-- Server Installation -->
             <div class="status-card">
                 <h3>
-                    <span class="status-indicator status-broken"></span>
+                    <span class="status-indicator status-partial"></span>
                     Server Installation
                 </h3>
                 <ul class="step-list">
                     <li class="step-item">
                         <span class="step-name">Go Installation</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
@@ -209,20 +205,12 @@
                             <span class="status-indicator status-broken"></span>
                             <span>Broken</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Failed</span>
-                        </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Homebrew Installation</span>
                         <div class="step-status">
                             <span class="status-indicator status-broken"></span>
                             <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Failed</span>
                         </div>
                     </li>
                 </ul>
@@ -234,43 +222,35 @@
             <!-- Server Startup -->
             <div class="status-card">
                 <h3>
-                    <span class="status-indicator status-broken"></span>
+                    <span class="status-indicator status-working"></span>
                     Server Startup
                 </h3>
                 <ul class="step-list">
                     <li class="step-item">
                         <span class="step-name">HTTP Server</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">gRPC Server</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Health Check API</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Traces API</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
@@ -283,50 +263,42 @@
             <!-- Python SDK -->
             <div class="status-card">
                 <h3>
-                    <span class="status-indicator status-broken"></span>
+                    <span class="status-indicator status-working"></span>
                     Python SDK
                 </h3>
                 <ul class="step-list">
                     <li class="step-item">
                         <span class="step-name">Installation</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Basic Tracing</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Agent Tracing</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">LLM Tracing</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Manual Tracing</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
@@ -339,36 +311,28 @@
             <!-- Examples & Testing -->
             <div class="status-card">
                 <h3>
-                    <span class="status-indicator status-broken"></span>
+                    <span class="status-indicator status-partial"></span>
                     Examples & Testing
                 </h3>
                 <ul class="step-list">
                     <li class="step-item">
                         <span class="step-name">Simple Test</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Test Script</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Mock LLM Calls</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
                     </li>
@@ -388,28 +352,28 @@
             <!-- Documentation -->
             <div class="status-card">
                 <h3>
-                    <span class="status-indicator status-broken"></span>
+                    <span class="status-indicator status-partial"></span>
                     Documentation
                 </h3>
                 <ul class="step-list">
                     <li class="step-item">
                         <span class="step-name">README.md</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Complete</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Website Content</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Complete</span>
                         </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Code Examples</span>
                         <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
+                            <span class="status-indicator status-working"></span>
                             <span>Complete</span>
                         </div>
                     </li>
