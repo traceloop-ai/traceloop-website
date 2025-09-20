@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traceloop AI - Local-First Observability for AI Agents</title>
+    <meta name="description" content="Monitor, debug, and improve your LLM applications with confidence. Local-first observability platform for AI agents.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🔍%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🔍</span>
+                <span class="brand-text">Traceloop AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#quickstart" class="nav-link">Quick Start</a>
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="https://github.com/traceloop-ai/traceloop" class="nav-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Local-First Observability for <span class="gradient-text">AI Agents</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Monitor, debug, and improve your LLM applications with confidence. 
+                    Your data never leaves your machine.
+                </p>
+                <div class="hero-badges">
+                    <span class="badge">🔒 Privacy-First</span>
+                    <span class="badge">⚡ High Performance</span>
+                    <span class="badge">🚀 Production Ready</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#quickstart" class="btn btn-primary">Get Started</a>
+                    <a href="https://github.com/traceloop-ai/traceloop" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Local Data</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0ms</span>
+                        <span class="stat-label">Network Latency</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Privacy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">traceloop.py</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="keyword">import</span> traceloop
+
+<span class="comment"># Initialize traceloop</span>
+traceloop.init(
+    endpoint=<span class="string">"http://localhost:8080"</span>,
+    service_name=<span class="string">"my-ai-agent"</span>
+)
+
+<span class="comment"># Automatic tracing with decorators</span>
+<span class="decorator">@traceloop.trace_agent</span>(<span class="string">"my-agent"</span>)
+<span class="keyword">def</span> <span class="function">my_agent_function</span>(user_input: <span class="type">str</span>) -> <span class="type">str</span>:
+    <span class="comment"># Your agent logic here</span>
+    response = <span class="function">call_llm</span>(user_input)
+    <span class="keyword">return</span> response</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Traceloop?</h2>
+                <p class="section-subtitle">Built for AI developers who value privacy, performance, and control</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Complete Trace Visibility</h3>
+                    <p class="feature-description">See every LLM call, tool use, and decision in your AI agents with beautiful visualizations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Local-First Privacy</h3>
+                    <p class="feature-description">Your data never leaves your machine. Complete data sovereignty and compliance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Zero Latency</h3>
+                    <p class="feature-description">No network calls for tracing. Everything runs locally with minimal overhead.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Framework Agnostic</h3>
+                    <p class="feature-description">Works with LangChain, CrewAI, raw OpenAI, Anthropic, and any AI framework.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Real-time Dashboard</h3>
+                    <p class="feature-description">Beautiful web interface for trace visualization and performance analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Production Ready</h3>
+                    <p class="feature-description">From local development to cloud deployment with enterprise-grade reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Started in 2 Minutes</h2>
+                <p class="section-subtitle">Everything runs locally on your machine</p>
+            </div>
+            <div class="quickstart-content">
+                <div class="quickstart-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Start the Server</h3>
+                            <div class="code-snippet">
+                                <pre><code><span class="comment"># Using Go</span>
+go install github.com/traceloop-ai/traceloop/cmd/traceloop@latest
+traceloop server
+
+<span class="comment"># Or using Docker</span>
+docker run -p 8080:8080 ghcr.io/traceloop-ai/traceloop:latest</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Install the Python SDK</h3>
+                            <div class="code-snippet">
+                                <pre><code>pip install traceloop</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Add Tracing to Your Code</h3>
+                            <div class="code-snippet">
+                                <pre><code><span class="keyword">import</span> traceloop
+
+traceloop.init(service_name=<span class="string">"my-agent"</span>)
+
+<span class="decorator">@traceloop.trace_agent</span>(<span class="string">"my-agent"</span>)
+<span class="keyword">def</span> <span class="function">my_agent</span>():
+    <span class="comment"># Your AI agent code here</span>
+    <span class="keyword">pass</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quickstart-visual">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-header">
+                            <h4>Traceloop Dashboard</h4>
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="trace-item">
+                                <div class="trace-header">
+                                    <span class="trace-name">my-agent</span>
+                                    <span class="trace-status success">✓</span>
+                                </div>
+                                <div class="trace-timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">0ms</span>
+                                        <span class="timeline-event">Agent started</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">150ms</span>
+                                        <span class="timeline-event">LLM call to GPT-4</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">2.1s</span>
+                                        <span class="timeline-event">Response received</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time">2.2s</span>
+                                        <span class="timeline-event">Agent completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Local-First Architecture</h2>
+                <p class="section-subtitle">Everything runs on your machine - no external dependencies</p>
+            </div>
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <div class="arch-item">
+                        <div class="arch-icon">🐍</div>
+                        <span>Python SDK</span>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon">📱</div>
+                        <span>TypeScript SDK</span>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon">🔧</div>
+                        <span>Other SDKs</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <div class="arch-item main">
+                        <div class="arch-icon">🖥️</div>
+                        <span>Traceloop Server (Local)</span>
+                        <div class="arch-subitems">
+                            <div class="arch-subitem">Trace API</div>
+                            <div class="arch-subitem">Web UI</div>
+                            <div class="arch-subitem">Local Storage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-note">
+                    <span class="note-icon">🔒</span>
+                    <span>Data Sovereignty: All traces stored locally</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-subtitle">Join the local-first AI observability revolution</p>
+                <div class="cta-actions">
+                    <a href="https://github.com/traceloop-ai/traceloop" class="btn btn-primary btn-large" target="_blank">Star on GitHub</a>
+                    <a href="#quickstart" class="btn btn-secondary btn-large">View Documentation</a>
+                </div>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">GitHub Stars</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Official Domains</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Privacy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo">🔍</span>
+                        <span class="brand-text">Traceloop AI</span>
+                    </div>
+                    <p class="footer-description">
+                        Local-first observability platform for AI agents. 
+                        Your data, your control.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="#features" class="footer-link">Features</a>
+                        <a href="#quickstart" class="footer-link">Quick Start</a>
+                        <a href="https://github.com/traceloop-ai/traceloop" class="footer-link" target="_blank">GitHub</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <a href="#" class="footer-link">Documentation</a>
+                        <a href="#" class="footer-link">Examples</a>
+                        <a href="#" class="footer-link">API Reference</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Community</h4>
+                        <a href="#" class="footer-link">Discord</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Blog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Domains</h4>
+                        <a href="https://traceloop-ai.dev" class="footer-link" target="_blank">traceloop-ai.dev</a>
+                        <a href="https://traceloop-ai.io" class="footer-link" target="_blank">traceloop-ai.io</a>
+                        <a href="https://traceloop-ai.ai" class="footer-link" target="_blank">traceloop-ai.ai</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Traceloop AI. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="https://github.com/traceloop-ai/traceloop/blob/main/LICENSE" class="footer-link" target="_blank">License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
