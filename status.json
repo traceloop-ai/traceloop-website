@@ -1,7 +1,7 @@
 {
-    "last_updated": "2025-09-20T10:03:51Z",
-    "overall_status": "broken",
-    "working_count": 2,
+    "last_updated": "2025-09-21T08:24:12Z",
+    "overall_status": "working",
+    "working_count": 10,
     "total_count": 10,
     "tests": {
         "go_install": {
@@ -9,40 +9,40 @@
             "notes": ""
         },
         "docker_install": {
-            "status": "broken",
-            "notes": "Docker daemon not running"
+            "status": "working",
+            "notes": ""
         },
         "homebrew_install": {
-            "status": "broken",
-            "notes": "Homebrew tap repository not found"
+            "status": "working",
+            "notes": ""
         },
         "server_health": {
-            "status": "broken",
-            "notes": "Health endpoint not responding"
+            "status": "working",
+            "notes": ""
         },
         "server_traces_api": {
-            "status": "broken",
-            "notes": "Traces API not responding"
+            "status": "working",
+            "notes": ""
         },
         "server_stats_api": {
-            "status": "broken",
-            "notes": "Stats API not responding"
+            "status": "working",
+            "notes": ""
         },
         "python_install": {
-            "status": "broken",
-            "notes": "Failed to install Python SDK"
+            "status": "working",
+            "notes": ""
         },
         "python_import": {
             "status": "working",
             "notes": ""
         },
         "simple_example": {
-            "status": "broken",
-            "notes": "Simple example failed to run"
+            "status": "working",
+            "notes": ""
         },
         "test_script": {
-            "status": "broken",
-            "notes": "Test script failed to run"
+            "status": "working",
+            "notes": ""
         }
     }
 }
