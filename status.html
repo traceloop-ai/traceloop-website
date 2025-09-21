@@ -202,6 +202,10 @@
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Docker Installation</span>
@@ -213,9 +217,17 @@
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Homebrew Installation</span>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                         <div class="step-status">
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
@@ -248,6 +260,10 @@
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">gRPC Server</span>
@@ -265,6 +281,10 @@
                     </li>
                     <li class="step-item">
                         <span class="step-name">Traces API</span>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                         <div class="step-status">
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
@@ -303,6 +323,10 @@
                     </li>
                     <li class="step-item">
                         <span class="step-name">Basic Tracing</span>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                         <div class="step-status">
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
@@ -356,9 +380,17 @@
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
                         </div>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                     </li>
                     <li class="step-item">
                         <span class="step-name">Test Script</span>
+                        <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
                         <div class="step-status">
                             <span class="status-indicator status-working"></span>
                             <span>Working</span>
@@ -443,6 +475,10 @@
                             <span>Working</span>
                         </div>
                         <div class="step-status">
+                            <span class="status-indicator status-working"></span>
+                            <span>Working</span>
+                        </div>
+                        <div class="step-status">
                             <span class="status-indicator status-broken"></span>
                             <span>Broken</span>
                         </div>
@@ -489,18 +525,66 @@
     </div>
 
     <script>
-        // Update last updated time
-        document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+        // Load status data from traceloop repository
+        async function loadStatus() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/traceloop-ai/traceloop/main/status.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load status data');
+                }
+                const data = await response.json();
+                updateStatusPage(data);
+            } catch (error) {
+                console.error('Error loading status:', error);
+                // Fallback to static content or show error
+                document.getElementById('lastUpdated').textContent = 'Error loading status';
+            }
+        }
+        
+        function updateStatusPage(data) {
+            // Update last updated time
+            document.getElementById('lastUpdated').textContent = new Date(data.last_updated).toLocaleString();
+            
+            // Update overall status
+            const overallStatus = document.querySelector('.overall-status');
+            const statusIndicator = overallStatus.querySelector('.status-indicator');
+            const statusText = overallStatus.querySelector('strong');
+            const progressText = overallStatus.querySelector('p');
+            
+            statusIndicator.className = `status-indicator status-${data.overall_status}`;
+            statusText.textContent = data.overall_status === 'working' ? 'All systems operational' : 
+                                   data.overall_status === 'partial' ? 'Some systems need attention' : 
+                                   'Multiple systems down';
+            progressText.textContent = `Progress: ${data.working_count}/${data.total_count} tests passing.`;
+            
+            // Update individual test statuses
+            updateTestStatus('go_install', data.tests.go_install);
+            updateTestStatus('docker_install', data.tests.docker_install);
+            updateTestStatus('homebrew_install', data.tests.homebrew_install);
+            updateTestStatus('server_health', data.tests.server_health);
+            updateTestStatus('server_traces_api', data.tests.server_traces_api);
+            updateTestStatus('server_stats_api', data.tests.server_stats_api);
+            updateTestStatus('python_install', data.tests.python_install);
+            updateTestStatus('python_import', data.tests.python_import);
+            updateTestStatus('simple_example', data.tests.simple_example);
+            updateTestStatus('test_script', data.tests.test_script);
+        }
+        
+        function updateTestStatus(testId, testData) {
+            // This is a simplified version - you might want to map test IDs to specific UI elements
+            console.log(`Updating ${testId}:`, testData);
+        }
         
         // Refresh status function
         function refreshStatus() {
-            location.reload();
+            loadStatus();
         }
         
+        // Load status on page load
+        document.addEventListener('DOMContentLoaded', loadStatus);
+        
         // Auto-refresh every 5 minutes
-        setInterval(() => {
-            location.reload();
-        }, 300000);
+        setInterval(loadStatus, 300000);
     </script>
 </body>
 </html>
