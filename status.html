@@ -192,50 +192,29 @@
                     Server Installation
                 </h3>
                 <ul class="step-list">
-                    <li class="step-item">
+                    <li class="step-item" data-test="go_install">
                         <span class="step-name">Go Installation</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
-                    <li class="step-item">
+                    <li class="step-item" data-test="docker_install">
                         <span class="step-name">Docker Installation</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
-                    <li class="step-item">
+                    <li class="step-item" data-test="homebrew_install">
                         <span class="step-name">Homebrew Installation</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
                 </ul>
                 <div class="step-notes">
@@ -250,49 +229,29 @@
                     Server Startup
                 </h3>
                 <ul class="step-list">
-                    <li class="step-item">
-                        <span class="step-name">HTTP Server</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">gRPC Server</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
+                    <li class="step-item" data-test="server_health">
                         <span class="step-name">Health Check API</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
+                        <div class="step-notes"></div>
                     </li>
-                    <li class="step-item">
+                    <li class="step-item" data-test="server_traces_api">
                         <span class="step-name">Traces API</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
+                        <div class="step-notes"></div>
+                    </li>
+                    <li class="step-item" data-test="server_stats_api">
+                        <span class="step-name">Stats API</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
                 </ul>
                 <div class="step-notes">
@@ -307,55 +266,21 @@
                     Python SDK
                 </h3>
                 <ul class="step-list">
-                    <li class="step-item">
+                    <li class="step-item" data-test="python_install">
                         <span class="step-name">Installation (from source)</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
+                        <div class="step-notes"></div>
                     </li>
-                    <li class="step-item">
-                        <span class="step-name">PyPI Package</span>
+                    <li class="step-item" data-test="python_import">
+                        <span class="step-name">Import & Basic Functionality</span>
                         <div class="step-status">
-                            <span class="status-indicator status-partial"></span>
-                            <span>In Progress</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Basic Tracing</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Agent Tracing</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">LLM Tracing</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Manual Tracing</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
                 </ul>
                 <div class="step-notes">
@@ -370,49 +295,21 @@
                     Examples & Testing
                 </h3>
                 <ul class="step-list">
-                    <li class="step-item">
-                        <span class="step-name">Simple Test</span>
+                    <li class="step-item" data-test="simple_example">
+                        <span class="step-name">Simple Example</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
-                    <li class="step-item">
+                    <li class="step-item" data-test="test_script">
                         <span class="step-name">Test Script</span>
                         <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
+                            <span class="status-indicator status-unknown"></span>
+                            <span class="status-text">Loading...</span>
                         </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Mock LLM Calls</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Trace Persistence</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
+                        <div class="step-notes"></div>
                     </li>
                 </ul>
                 <div class="step-notes">
@@ -420,105 +317,12 @@
                 </div>
             </div>
 
-            <!-- Documentation -->
-            <div class="status-card">
-                <h3>
-                    <span class="status-indicator status-partial"></span>
-                    Documentation
-                </h3>
-                <ul class="step-list">
-                    <li class="step-item">
-                        <span class="step-name">README.md</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Complete</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Website Content</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Complete</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Code Examples</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Complete</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">API Reference</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-partial"></span>
-                            <span>Partial</span>
-                        </div>
-                    </li>
-                </ul>
-                <div class="step-notes">
-                    Core documentation is complete. API reference needs expansion.
-                </div>
-            </div>
-
-            <!-- Known Issues -->
-            <div class="status-card">
-                <h3>
-                    <span class="status-indicator status-partial"></span>
-                    Known Issues
-                </h3>
-                <ul class="step-list">
-                    <li class="step-item">
-                        <span class="step-name">Docker Installation</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Broken</span>
-                        </div>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Environment Issue</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Homebrew Tap</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-broken"></span>
-                            <span>Repository Missing</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Trace Storage</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-partial"></span>
-                            <span>Not Persisted</span>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <span class="step-name">Dashboard UI</span>
-                        <div class="step-status">
-                            <span class="status-indicator status-working"></span>
-                            <span>Working</span>
-                        </div>
-                    </li>
-                </ul>
-                <div class="step-notes">
-                    All priority fixes completed: Homebrew tap created, trace persistence implemented, dashboard UI tested and working.
-                </div>
-            </div>
         </div>
 
         <div class="ci-info">
             <h3>CI/CD Integration</h3>
             <p>This status page is automatically updated with each CI run. The validation script tests all quick start steps and updates the status accordingly.</p>
-            <p><strong>Last CI Run:</strong> <span id="lastCiRun">Not available</span></p>
+            <p><strong>Last CI Run:</strong> <span id="lastCiRun">Loading...</span></p>
             <p><strong>Next Scheduled Run:</strong> Every push to main branch</p>
             <button class="refresh-btn" onclick="refreshStatus()">Refresh Status</button>
         </div>
@@ -543,7 +347,9 @@
         
         function updateStatusPage(data) {
             // Update last updated time
-            document.getElementById('lastUpdated').textContent = new Date(data.last_updated).toLocaleString();
+            const lastUpdated = new Date(data.last_updated);
+            document.getElementById('lastUpdated').textContent = lastUpdated.toLocaleString();
+            document.getElementById('lastCiRun').textContent = lastUpdated.toLocaleString();
             
             // Update overall status
             const overallStatus = document.querySelector('.overall-status');
@@ -571,8 +377,32 @@
         }
         
         function updateTestStatus(testId, testData) {
-            // This is a simplified version - you might want to map test IDs to specific UI elements
-            console.log(`Updating ${testId}:`, testData);
+            const stepItem = document.querySelector(`[data-test="${testId}"]`);
+            if (!stepItem) return;
+            
+            const statusIndicator = stepItem.querySelector('.status-indicator');
+            const statusText = stepItem.querySelector('.status-text');
+            const stepNotes = stepItem.querySelector('.step-notes');
+            
+            // Update status indicator
+            statusIndicator.className = `status-indicator status-${testData.status}`;
+            
+            // Update status text
+            const statusLabels = {
+                'working': 'Working',
+                'partial': 'Partial',
+                'broken': 'Broken',
+                'unknown': 'Unknown'
+            };
+            statusText.textContent = statusLabels[testData.status] || testData.status;
+            
+            // Update notes if available
+            if (testData.notes && testData.notes.trim()) {
+                stepNotes.textContent = testData.notes;
+                stepNotes.style.display = 'block';
+            } else {
+                stepNotes.style.display = 'none';
+            }
         }
         
         // Refresh status function
